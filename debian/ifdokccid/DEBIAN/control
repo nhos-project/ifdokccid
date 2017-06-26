@@ -2,9 +2,9 @@ Package: ifdokccid
 Version: 4.2.8-1
 Architecture: all
 Maintainer: Rob Dyke <rob@neovahealth.co.uk>
-Installed-Size: 1149
+Installed-Size: 1148
 Section: unknown
 Priority: optional
-Homepage: <insert the upstream URL, if relevant>
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: HID Global Omnikey drivers
+ NHSbuntu packaged CCID / PCSC drivers for
+ OMNIKEY 512X, 532X, 1021, 3X21, 6121 readers

@@ -1,5 +1,5 @@
-ifdokccid (4.2.8-1) unstable; urgency=medium
+ifdokccid (4.2.8-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial NHSbuntu package
 
  -- Rob Dyke <rob@neovahealth.co.uk>  Mon, 26 Jun 2017 17:38:38 +0100
