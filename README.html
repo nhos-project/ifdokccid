@@ -1,0 +1,146 @@
+***************************************************************
+
+ Installation instructions for 
+ the HID Global OMNIKEY CCID driver Smartcard reader series.
+	    
+ Version v4.2.8
+ HID Global
+ https://www.hidglobal.com
+ 
+***************************************************************
+
+------------------------------
+ Products supported
+------------------------------
+* OMNIKEY 1021 USB<br>* OMNIKEY 2020<br>* OMNIKEY 3020 USB<br>* OMNIKEY 3021 USB<br>* OMNIKEY 3021 USB<br>* OMNIKEY 3111 serial<br>* OMNIKEY 3111 serial<br>* OMNIKEY 3620 USB<br>* OMNIKEY 3121 USB<br>* OMNIKEY 3621 USB<br>* OMNIKEY 3621 USB<br>* OMNIKEY 3821 USB<br>* OMNIKEY 3821 USB<br>* OMNIKEY 3821 USB<br>* OMNIKEY 4121 CL<br>* OMNIKEY 4121 CL<br>* OMNIKEY 4321 USB<br>* OMNIKEY 4321 USB<br>* OMNIKEY 5025 CL USB Prox<br>* OMNIKEY 5121 CL USB Reader<br>* OMNIKEY 5121 USB<br>* OMNIKEY 5121 USB<br>* OMNIKEY 5121 USB<br>* OMNIKEY 5121 USB<br>* OMNIKEY 5121 CL USB<br>* OMNIKEY 5121 USB<br>* OMNIKEY 5125/5325 CL USB Prox<br>* OMNIKEY 5125 USB Prox<br>* OMNIKEY 5125 USB Prox CL<br>* OMNIKEY 5125 USB Prox<br>* OMNIKEY 5127 USB CK<br>* OMNIKEY 5220 USB PayPass CL<br>* OMNIKEY 5221 USB PayPass<br>* OMNIKEY 5311 USB<br>* OMNIKEY 5021 CL<br>* OMNIKEY 5321 USB<br>* OMNIKEY 5321 USB<br>* OMNIKEY 5321 USB<br>* OMNIKEY 5321 USB<br>* OMNIKEY 5321<br>* OMNIKEY 5325 USB Prox<br>* <br>* <br>* <br>* OMNIKEY 5341 USB<br>* OMNIKEY 5342 USB<br>* OMNIKEY 5343 USB<br>* OMNIKEY 5421 USB<br>* OMNIKEY 6020 USB<br>* OMNIKEY 6121 USB<br>* OMNIKEY 6121 USB<br>* OMNIKEY 6311 CL USB<br>* OMNIKEY 6321 CL USB<br>* OMNIKEY 6321 USB<br>* <br>* OMNIKEY 7120 USB<br>* OMNIKEY 7121 USB<br>* OMNIKEY 8630 USB<br>* OMNIKEY 9621 USB<br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* <br>* Fujitsu Siemens SmartCard Keyboard USB 2A<br>* Fujitsu Siemens SmartCard USB 2A<br>* Fujitsu D321<br>* Fujitsu G87 SC Contact Keyboard<br>* Cherry SmartBoard XX44<br>* Cherry SmartTerminal XX44<br>* <br>* Cherry TC 1100<br>* Cherry TC 1200<br>* Cherry TC 1300<br>* Cherry G87 SC Keyboard<br>
+
+------------------------------
+ What you need
+------------------------------
+
+[1] Kernel with USB support either compiled in or as modules
+
+[2] Mounted /usbfs (/usbdevfs)
+    For more detailed informations see http://www.linux-usb.org/
+
+[3] libusb >= Version 1.0.8 available at
+    http://libusb.sourceforge.net/
+
+[4] PCSCLite > Version 1.5.5 available at 
+        http://alioth.debian.org/projects/pcsclite/
+
+[5] This driver supports our CT-API and our Synchronous API.
+    So, if you like to use one of them, you must download
+    the API in question from https://www.hidglobal.com.
+
+------------------------------
+What is new in this release ?
+------------------------------
+* Added support for El Capitan<br>
+        
+------------------------------
+ Driver Installation
+------------------------------
+
+After you have downloaded the tarball extract it in any directory
+ 
+  # tar -xzvf ifdokccid
+
+change to this directory  and run as root user
+  
+  # ./install
+
+This script checks if PCSCLite is installed and then copies 
+the CCID driver bundle to /usr/local/pcsc/drivers directory,
+ which is the default PCSCLite USB driver dropdir. 
+You can change the dropdir by providing another install path 
+to the install script using the option '-d':
+
+  # ./install -d /path/to/my/dropdir
+
+------------------------------
+ Troubleshooting
+------------------------------
+
+- Stop the pcscd daemon
+    # sudo killall -9 pcscd
+    
+If you can just detect one of the two reader slots of the 5321 it can happen that the libccid driver 
+catches the reader. To be sure you can start the pcsc daemon in debug mode:
+# sudo pcscd -fd
+
+If you plug now the reader and it detects just one slot you can fix the problem:
+- find out the drop dir of the drivers
+    # sudo pcscd -v
+    output e.g.
+    pcsc-lite version 1.5.5.
+    Copyright (C) 1999-2002 by David Corcoran <corcoran@linuxnet.com>.
+    Copyright (C) 2001-2008 by Ludovic Rousseau <ludovic.rousseau@free.fr>.
+    Copyright (C) 2003-2004 by Damien Sauveron <sauveron@labri.fr>.
+    Report bugs to <muscle@lists.musclecard.com>.
+    Enabled features: Linux libhal usbdropdir=/usr/local/pcsc/drivers confdir=/etc ipcdir=/var/run/pcscd
+
+    The path after usbdropdir shows you the dropdir of the drivers. e.g /usr/local/pcsc/drivers
+- change into drivers directory and list subdirectories. e.g.
+    # cd /usr/local/pcsc/drivers
+    # ls
+    output e.g.
+    ifd-ccid.bundle     ifdokrfid_lnx_i686-2.8.1.bundle
+- change into libccid Contents directory:
+    # cd ifd-ccid.bundle/Contents
+- create a backup of the current file so that you can restore it if something goes wrong
+    # sudo cp Info.plist Info.plist.backup
+- add the right to write to Info.plist
+    # sudo chmod +w Info.plist
+- open Info.plist in an editor your choice e.g. vi, vim, emacs, kate
+    # sudo vi Info.plist
+- look for the product ID's section, it should be close to line 200. please look for 0x5321
+- IMPORTANT!!! COUNT which entry it is and delete it, you need the position for the further steps
+- look for the vendor ID's section, it should be close to line 100. please look for the entry at same position like the product ID
+  the entry should be 0x076B, please delete this line
+- look for the friendly names section, it should be close to line 300. please look for the entry at same position like the product ID
+  the entry should be "OmniKey CardMan 5321", please delete this line
+- save the file and close the editor
+- delete the right to write to Info.plist
+    # sudo chmod -w Info.plist
+- restart pcscd with sudo pcscd
+Now the HID OMNIKEY 5321 will be detected by the pcsc daemon
+
+------------------------------
+ Note
+------------------------------
+
+1. PCSCLite with ADD_SERIAL_NUMBER support contains a bug which prevents
+   PCSCLite from dedecting a reader removal. 
+   Workaround:
+   * undefine ADD_SERIAL_NUMBER in hotplug_libusb.c and
+     recompile PCSC.
+
+2. PCSCLite with ADD_SERIAL_NUMBER support contains a bug causes PCSCLite to crash
+   if more than 1 reader is used.
+   Workaround:
+   * undefine ADD_SERIAL_NUMBER in hotplug_libusb.c and
+     recompile PCSC.
+   
+-----------------------------
+ Support
+-----------------------------
+
+Q: What driver version am I using at the moment?
+
+A: You can determine the driver version number by having a look at the PCSCLite
+   bundle directory (usually /usr/local/pcsc/drivers): The bundle name of our 
+   devices drivers contain the driver version number. 
+   The driver is also printing a version string every time a reader is activated 
+   by PCSCLite: This string can be found either in the system log
+   or on the console you started PCSCLite daemon from.
+
+
+Q: I am experiencing problems using smartcard XYZ !
+
+A: Please send an email to our support address eusupport@hidglobal.com containing
+   a description of the chain of events which lead to the misbehavior (reader plug-in/-off, 
+   SC insertion/removal, commands sent to the SC or at least the program used to talk to the SC), 
+   also include the name and ATR of the smartcard, and add the PCSCLite log events (should be written to
+   your system log /var/log/messages or similar). Your systems kernel version and kind of distribution
+   may also be helpful.
