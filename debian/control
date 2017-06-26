@@ -4,12 +4,10 @@ Priority: optional
 Maintainer: Rob Dyke <rob@neovahealth.co.uk>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.6
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://anonscm.debian.org/collab-maint/ifdokccid.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ifdokccid.git
 
 Package: ifdokccid
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: HID Global Omnikey drivers
+ NHSbuntu packaged CCID / PCSC drivers for
+ OMNIKEY 512X, 532X, 1021, 3X21, 6121 readers
