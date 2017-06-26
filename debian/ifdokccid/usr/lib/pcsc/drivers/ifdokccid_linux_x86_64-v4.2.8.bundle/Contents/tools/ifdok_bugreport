@@ -1,0 +1,59 @@
+#!/bin/bash
+
+
+
+if [ -z "${TMP}" ]; then
+   TMP="/tmp"
+fi
+if [ -n "${TMPDIR}" ]; then
+   TMP=${TMPDIR}
+fi
+
+TMP="${TMP}/ifdokbug_${RANDOM}${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
+
+mkdir -p ${TMP}
+pushd ${TMP}
+
+uname -a > uname
+dmesg | grep -i -E '(usb|hci|pcsc|smart|card|omnikey)' > dmesg
+
+cp /proc/cpuinfo ./
+# OS version
+cp /etc/SuSE-release ./
+cp /etc/debian_version ./
+cp /etc/redhat-release ./
+# other logs
+
+lsusb -v > lsusb
+
+# find pcscd
+PATH="${PATH}:/usr/local/sbin:/usr/sbin:/sbin"
+# pcscd ver
+pcscd -v > pcscd_ver
+# find driver
+dropdir=$(pcscd -v | grep usbdropdir | sed 's/^.*usbdropdir=\(.*\) .*$/\1/' | cut -f1 -d' ')
+
+for s in sha256sum sha1sum md5sum cksum; do
+    if which $s; then
+        sum=$s
+        break
+    fi
+done
+echo ${sum} > sum
+find ${dropdir} | xargs -n1 ${sum} &>driverlist
+
+cp /etc/omnikey.ini ./
+
+popd
+tarname="ifdok_bug_$(date '+%Y-%m-%d_%H_%M_%S').tar.gz"
+tar zcf ${tarname} ${TMP}
+rm -rf ${TMP}
+echo ""
+echo "Please review ${tarname} contents before sending to support."
+echo "An effort has been made to gather only information relevant"
+echo "in order support HID Omnikey driver issues, not disclosing any"
+echo "unrelated and/or sensitive information"
+echo ""
+echo "YOU AGREE TO DISCLOSE INFORMATION CONTAINED IN ${tarname} TO HID SUPPORT"
+echo "You may send ${tarname} to eusupport@hidglobal.com or your designated support contact."
+echo ""

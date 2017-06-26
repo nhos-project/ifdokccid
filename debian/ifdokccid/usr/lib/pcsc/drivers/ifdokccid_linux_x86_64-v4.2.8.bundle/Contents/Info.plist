@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+  <dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundleExecutable</key>
+    <string>ifdokccid.so</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1.0.0d2</string>
+    <key>CSResourcesFileMapped</key>
+    <true/>
+    <key>ManufacturerURL</key>
+    <string>https://www.hidglobal.com</string>
+    <key>ManufacturerString</key>
+    <string>HID Global</string>
+    <key>ifdProductString</key>
+    <string>HID Global OMNIKEY CCID driver</string>
+    <key>ifdFriendlyName</key>
+    <string>OMNIKEY CardMan (076B:1021) 1021</string>
+    <string>OMNIKEY CardMan (076B:0596) 2020</string>
+    <string>OMNIKEY CardMan (076B:3020) 3020</string>
+    <string>OMNIKEY CardMan (076B:3021) 3021</string>
+    <string>OMNIKEY CardMan (076B:3022) 3021</string>
+    <string>OMNIKEY CardMan (076B:3111) 3111</string>
+    <string>OMNIKEY CardMan (076B:3112) 3111</string>
+    <string>OMNIKEY CardMan (076B:3620) 3620</string>
+    <string>OMNIKEY CardMan (076B:7021) 3121</string>
+    <string>OMNIKEY CardMan (076B:3621) 3621</string>
+    <string>OMNIKEY CardMan (076B:3623) 3621</string>
+    <string>OMNIKEY CardMan (076B:3821) 3821</string>
+    <string>OMNIKEY CardMan (076B:3822) 3821</string>
+    <string>OMNIKEY CardMan (076B:3823) 3821</string>
+    <string>OMNIKEY CardMan (076B:5820) 4121 CL</string>
+    <string>OMNIKEY CardMan (076B:5840) 4121 CL</string>
+    <string>OMNIKEY CardMan (076B:4321) 4321</string>
+    <string>OMNIKEY CardMan (076B:4322) 4321</string>
+    <string>OMNIKEY CardMan (076B:512D) 5025 PROX CL</string>
+    <string>OMNIKEY CardMan (076B:5120) 5120 CL</string>
+    <string>OMNIKEY CardMan (076B:5121) 5121</string>
+    <string>OMNIKEY CardMan (076B:5122) 5121</string>
+    <string>OMNIKEY CardMan (076B:5123) 5121</string>
+    <string>OMNIKEY CardMan (076B:C001) 5121</string>
+    <string>OMNIKEY CardMan (076B:C100) 5121</string>
+    <string>OMNIKEY CardMan (076B:C101) 5121</string>
+    <string>OMNIKEY CardMan (076B:5124) 5124 CL</string>
+    <string>OMNIKEY CardMan (076B:5125) 5125</string>
+    <string>OMNIKEY CardMan (076B:C104) 5125 CL</string>
+    <string>OMNIKEY CardMan (076B:C105) 5125</string>
+    <string>OMNIKEY CardMan (076B:5127) 5127 CK</string>
+    <string>OMNIKEY CardMan (076B:5220) 5220 Pay CL</string>
+    <string>OMNIKEY CardMan (076B:5221) 5221 Pay</string>
+    <string>OMNIKEY CardMan (076B:5311) 5321</string>
+    <string>OMNIKEY CardMan (076B:5320) 5021 CL</string>
+    <string>OMNIKEY CardMan (076B:5320) 5321</string>
+    <string>OMNIKEY CardMan (076B:5321) 5321</string>
+    <string>OMNIKEY CardMan (076B:5322) 5321</string>
+    <string>OMNIKEY CardMan (076B:5323) 5321</string>
+    <string>OMNIKEY CardMan (076B:A521) 5321</string>
+    <string>OMNIKEY CardMan (076B:5325) 5325</string>
+    <string>OMNIKEY CardMan (076B:532A) 5321 CLi</string>
+    <string>OMNIKEY CardMan (076B:532B) 5321 Pay</string>
+    <string>OMNIKEY CardMan (076B:5340) 5021 CL</string>
+    <string>OMNIKEY CardMan (076B:5341) 5341</string>
+    <string>OMNIKEY CardMan (076B:5342) 5342</string>
+    <string>OMNIKEY CardMan (076B:5343) 5343</string>
+    <string>OMNIKEY CardMan (076B:5421) 5421</string>
+    <string>OMNIKEY CardMan (076B:1784) 6020</string>
+    <string>OMNIKEY CardMan (076B:6622) 6121</string>
+    <string>OMNIKEY CardMan (076B:6623) 6121</string>
+    <string>OMNIKEY CardMan (076B:6310) 6311 CL</string>
+    <string>OMNIKEY CardMan (076B:6320) 6321 CL</string>
+    <string>OMNIKEY CardMan (076B:6321) 6321</string>
+    <string>OMNIKEY CardMan (076B:632A) 6321 CLi</string>
+    <string>OMNIKEY CardMan (076B:1BD0) 7120</string>
+    <string>OMNIKEY CardMan (076B:1BD1) 7121</string>
+    <string>OMNIKEY CardMan (076B:8630) 8630</string>
+    <string>OMNIKEY CardMan (076B:9621) 9621</string>
+    <string>CCID SC Reader (076B:A011) Keyboard</string>
+    <string>CCID SC Reader (076B:A012) Keyboard</string>
+    <string>CCID SC Reader (076B:A021)</string>
+    <string>CCID SC Reader (076B:A022)</string>
+    <string>CCID SC Reader (076B:A023)</string>
+    <string>CCID SC Reader (076B:A024)</string>
+    <string>CCID SC Reader (076B:A111) Keyboard</string>
+    <string>CCID SC Reader (076B:A112) Keyboard</string>
+    <string>CCID SC Reader (076B:A721)</string>
+    <string>CCID SC Reader (076B:B000) HID identiCLASS</string>
+    <string>CCID SC Reader (076B:B001) iCLASS Smart@Link</string>
+    <string>CCID SC Reader (076B:C000)</string>
+    <string>CCID SC Reader (076B:C200)</string>
+    <string>CCID SC Reader (076B:C300)</string>
+    <string>CCID SC Reader (0BF8:1005) Keyboard</string>
+    <string>CCID SC Reader (0BF8:1006) Keyboard</string>
+    <string>CCID SC Reader (0BF8:101B) Fujitsu D321</string>
+    <string>(0BF8:1021) Fujitsu G87 SC Contact Keyboard</string>
+    <string>Cherry SmartBoard XX44 (046A:0010)</string>
+    <string>Cherry SmartTerminal XX44 (046A:002D)</string>
+    <string>Cherry SmartTerminal XX44 (046A:007B)</string>
+    <string>Cherry SC Reader (046A:0090)</string>
+    <string>Cherry SC Reader (046A:0091)</string>
+    <string>Cherry SC Reader (046A:0092)</string>
+    <string>Cherry SC Reader (046A:00A3)</string>
+    <key>ifdVendorID</key>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x076B</string>
+    <string>0x0BF8</string>
+    <string>0x0BF8</string>
+    <string>0x0BF8</string>
+    <string>0x0BF8</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <string>0x046A</string>
+    <key>ifdProductID</key>
+    <string>0x1021</string>
+    <string>0x0596</string>
+    <string>0x3020</string>
+    <string>0x3021</string>
+    <string>0x3022</string>
+    <string>0x3111</string>
+    <string>0x3112</string>
+    <string>0x3620</string>
+    <string>0x7021</string>
+    <string>0x3621</string>
+    <string>0x3623</string>
+    <string>0x3821</string>
+    <string>0x3822</string>
+    <string>0x3823</string>
+    <string>0x5820</string>
+    <string>0x5840</string>
+    <string>0x4321</string>
+    <string>0x4322</string>
+    <string>0x512D</string>
+    <string>0x5120</string>
+    <string>0x5121</string>
+    <string>0x5122</string>
+    <string>0x5123</string>
+    <string>0xC001</string>
+    <string>0xC100</string>
+    <string>0xC101</string>
+    <string>0x5124</string>
+    <string>0x5125</string>
+    <string>0xC104</string>
+    <string>0xC105</string>
+    <string>0x5127</string>
+    <string>0x5220</string>
+    <string>0x5221</string>
+    <string>0x5311</string>
+    <string>0x5320</string>
+    <string>0x5320</string>
+    <string>0x5321</string>
+    <string>0x5322</string>
+    <string>0x5323</string>
+    <string>0xA521</string>
+    <string>0x5325</string>
+    <string>0x532A</string>
+    <string>0x532B</string>
+    <string>0x5340</string>
+    <string>0x5341</string>
+    <string>0x5342</string>
+    <string>0x5343</string>
+    <string>0x5421</string>
+    <string>0x1784</string>
+    <string>0x6622</string>
+    <string>0x6623</string>
+    <string>0x6310</string>
+    <string>0x6320</string>
+    <string>0x6321</string>
+    <string>0x632A</string>
+    <string>0x1BD0</string>
+    <string>0x1BD1</string>
+    <string>0x8630</string>
+    <string>0x9621</string>
+    <string>0xA011</string>
+    <string>0xA012</string>
+    <string>0xA021</string>
+    <string>0xA022</string>
+    <string>0xA023</string>
+    <string>0xA024</string>
+    <string>0xA111</string>
+    <string>0xA112</string>
+    <string>0xA721</string>
+    <string>0xB000</string>
+    <string>0xB001</string>
+    <string>0xC000</string>
+    <string>0xC200</string>
+    <string>0xC300</string>
+    <string>0x1005</string>
+    <string>0x1006</string>
+    <string>0x101B</string>
+    <string>0x1021</string>
+    <string>0x0010</string>
+    <string>0x002D</string>
+    <string>0x007B</string>
+    <string>0x0090</string>
+    <string>0x0091</string>
+    <string>0x0092</string>
+    <string>0x00A3</string>
+    <key>ifdCapabilities</key>
+    <string>0x00000001</string>
+    <key>ifdMaxSpeed</key>
+    <string>115200</string>
+    <key>ifdProtocolSupport</key>
+    <string>0x00000011</string>
+  </dict>
+</plist>

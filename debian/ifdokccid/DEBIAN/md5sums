@@ -1,0 +1,8 @@
+a5c65978900d563866f024a047ffb711  lib/udev/ok_pcscd_hotplug.sh
+73d0938cc3fa9de11d7918357e8bad9c  usr/lib/pcsc/drivers/ifdokccid_linux_x86_64-v4.2.8.bundle/Contents/Info.plist
+7489ded3b76709b7cd181fd974996064  usr/lib/pcsc/drivers/ifdokccid_linux_x86_64-v4.2.8.bundle/Contents/Linux/ifdokccid.so
+bcf44683509330b15b89bc3bbadc750a  usr/lib/pcsc/drivers/ifdokccid_linux_x86_64-v4.2.8.bundle/Contents/tools/ifdok_bugreport
+db49860bd081c77c25ef861f75b85def  usr/lib/pcsc/drivers/ifdokccid_linux_x86_64-v4.2.8.bundle/Contents/tools/ifdok_xmled
+cb5be74fcefd391ec43a49c29b690ea4  usr/share/doc/ifdokccid/README.Debian
+04d8d7d16ca11737bdd3f2848f50647c  usr/share/doc/ifdokccid/changelog.Debian.gz
+068edc81d5bfc3e418a9f3eece14aacf  usr/share/doc/ifdokccid/copyright
